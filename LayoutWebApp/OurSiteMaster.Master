@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OurSiteMaster.master.cs" Inherits="LayoutWebApp.OurSiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="MainStyle.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 26px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="topPannel"><h1>Product Website</h1></div>
+        <div class="leftPannel"><h1>Slide Show</h1>
+
+            <marquee>
+                <asp:Image runat="server" ImageUrl="~/Images/AA1iHn22 (1).jpg" Width="150" Height="150" ID="Image1" />
+                 <asp:Image runat="server" ImageUrl="~/Images/AA1iHn22 (1).jpg" Width="150" Height="150" ID="Image2" />
+                 <asp:Image runat="server" ImageUrl="~/Images/AA1iHn22 (1).jpg" Width="150" Height="150" ID="Image3" />
+         </marquee>
+        </div>
+        <div class="centerPannel">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="rightPannel">
+            <table class="auto-style1">
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Product.aspx">Product</asp:HyperLink>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
+                    </td>
+                    <td class="auto-style2"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
